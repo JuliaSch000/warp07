@@ -5,8 +5,6 @@ on:                            # obiekt zagnieżdżony
 
 env:
     PROJECT_PATH: "warp07.Demo"
-
-env:
     DOTNET_VERSION: "10.0.x"
 
 jobs:
@@ -26,7 +24,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-          dotnet-version: ${{ env_DOTNET_VERSION }}
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Restore dependencies
       shell: bash
